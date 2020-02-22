@@ -77,27 +77,25 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
-
-function sumArray(sumArr) { //eslint-disable-line 
+function sumArray(sumArr) {
     var SumNumArr =  0;
-            for(var i=0;i<testArray.length;i++)
-              {                  
-                SumNumArr += testArray[i];
-               }
-               return [SumNumArr , `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${SumNumArr} is their sum.`];
+    for (var i = 0; i < testArray.length; i++)
+      {
+        SumNumArr = sum(SumNumArr , testArray[i])[0];
+      }
+    return [SumNumArr , `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${SumNumArr} is their sum.`];
     
-            }
+    }
 
-// function sumArray(sumArr) {
-//     var SumNumArr =  0;
-//     for (var i = 0; i < testArray.length; i++)
-//       {
-//         SumNumArr = sum(SumNumArr , testArray[i])[0];
-//       }
-//     return [SumNumArr , `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${SumNumArr} is their sum.`];
+// function sumArray(sumArr) { //eslint-disable-line 
+//     var sumNumArr =  0;
+//             for(var i=0;i<testArray.length;i++)
+//               {                  
+//                 sumNumArr += testArray[i];
+//                }
+//                return [sumNumArr , `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumNumArr} is their sum.`];
     
-//     }
-
+//             }
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -117,11 +115,26 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+    var multNumArr =  1;
+        for (var j = 0; j < testArray.length; j++)
+           {
+            multNumArr = multiply(multNumArr , testArray[j])[0];
+           }
+         return [multNumArr , `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multNumArr}.`];
+        
 }
 
+// function multiplyArray(multArr) { //eslint-disable-line
+//     var multNumArr =  1;
+//         for (var j = 0; j < testArray.length; j++)
+//            {
+//             multNumArr *= testArray[j];
+//            }
+//          return [multNumArr , `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multNumArr}.`];
+        
+// }
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+  testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
